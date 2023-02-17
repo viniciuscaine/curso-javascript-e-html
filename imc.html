@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso) {
+
+		return Math.round(peso / (altura * altura));
+	}
+
+	var imcVini = calculaImc(1.70, 70);
+	var imcJoao = calculaImc(1.72, 80);
+	var imcPedro = calculaImc(1.74, 90);
+	var imcJulio = calculaImc(1.76, 100);
+
+	mostra("O IMC de Vinícius é " + imcVini);
+	mostra("O IMC de João é " + imcJoao);
+	mostra("O IMC de Pedro é " + imcPedro);
+	mostra("O IMC de Júlio é " + imcJulio);
+
+	pulaLinha();
+
+	var nomeInformado = prompt("Digite seu nome:");
+	var alturaInformada = prompt(nomeInformado + ", informe a sua altura:");
+	var pesoInformado = prompt(nomeInformado + ", informe o seu peso:");
+	var imcCalculado = Math.round(pesoInformado / (alturaInformada * alturaInformada));
+	mostra(nomeInformado + ", o seu IMC é: " + imcCalculado);
+
+	if (imcCalculado < 18.5) {
+		mostra("Seu IMC está abaixo do recomendado");
+	}
+
+	if (imcCalculado > 35) {
+		mostra("Seu IMC está acima do recomendado");
+	}
+
+	if (imcCalculado >= 18.5 && imcCalculado <= 35) {
+		mostra("Seu IMC está no valor recomendado");
+	}
+
+</script>

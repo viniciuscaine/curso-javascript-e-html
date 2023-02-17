@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br>");
+	}
+
+	function pula2Linha() {
+
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pula2Linha();
+	}
+
+	var pulaLinha1 = "<br><br>";
+	var ano = 2023;
+
+	document.write("Minha idade é " + (ano - 1999) + "<br>");
+	document.write("A idade de Paulo é " + (ano - 1990) + "<br>");
+
+	ano = 2024;
+
+	document.write("A idade de Maria é " + (ano - 1980) + "<br>");
+
+	var minhaIdade = 24;
+	var idadePaulo = 33;
+	var idadeMaria = 44;
+
+	var media = (minhaIdade + idadeMaria + idadePaulo)/3;
+
+	document.write(pulaLinha1);
+
+	document.write("A média das idades é " + Math.round(media));
+
+	pulaLinha();
+
+	document.write("A média das idades é " + Math.round(media));
+	
+	pula2Linha();
+
+	document.write("A média das idades é " + Math.round(media));
+
+	pula2Linha(); 
+	
+	mostra("Olá mundo");
+	mostra("Olá mundo");
+
+
+</script>

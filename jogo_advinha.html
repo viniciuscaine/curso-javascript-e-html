@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var tentativa = 1;
+
+    while (tentativa <= 3) {
+
+        var chute = parseInt(prompt("Tente advinhar o número secreto"));
+
+        if (chute == numeroPensado) {
+            mostra("Parabéns! Você acertou o número secreto, que é " + numeroPensado);
+            break;
+            
+        } else {
+            alert("Que pena, você errou");
+        }
+
+        tentativa++;
+    }
+
+</script>
